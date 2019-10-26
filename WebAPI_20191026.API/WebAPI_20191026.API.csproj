@@ -13,4 +13,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebAPI_20191026.Model\WebAPI_20191026.Model.csproj" />
+    <ProjectReference Include="..\WebAPI_20191026.Repository\WebAPI_20191026.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
