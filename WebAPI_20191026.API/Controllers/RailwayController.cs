@@ -58,24 +58,5 @@ namespace WebAPI_20191026.API.Controllers
                 return StatusCode(StatusCodes.Status400BadRequest, ex.ToString());
             }
         }
-
-        //Just give 10-digit pnr number and get the status
-        //Request JSON is below
-        //{
-        //  "pnr": "1234567890"
-        //}
-        [HttpPost("PNRStatus")]
-        public async Task<IActionResult> PNRStatus(object search)
-        {
-            try
-            {
-                (int statusCode, string responseContent) = await railway.GetPNRStatus(search);
-                return StatusCode(statusCode, responseContent);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status400BadRequest, ex.ToString());
-            }
-        }
     }
 }

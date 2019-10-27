@@ -30,16 +30,5 @@ namespace WebAPI_20191026.Repository.Repositories
             (int statusCode, string result) = await HttpClientApi.PostAsync(url, content);
             return (statusCode, result);
         }
-
-        public async Task<(int statusCode, string result)> GetPNRStatus(object search)
-        {
-            var jObject = JObject.FromObject(search);
-            var url = "https://indianrailways.p.rapidapi.com/index.php?pnr=" + (string)jObject["pnr"];
-            var content = new StringContent("", Encoding.UTF8, "application/json");
-            content.Headers.Add("x-rapidapi-key", "218fdc0bafmsh8ea6900df3f2766p133418jsn352e4ec6089d");
-            content.Headers.Add("x-rapidapi-host", "indianrailways.p.rapidapi.com");
-            (int statusCode, string result) = await HttpClientApi.PostAsync(url, content);
-            return (statusCode, result);
-        }
     }
 }

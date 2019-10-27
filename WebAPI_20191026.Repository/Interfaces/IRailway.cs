@@ -10,6 +10,5 @@ namespace WebAPI_20191026.Repository.Interfaces
     {
         Task<(int statusCode, string result)> GetTrainSearch(object search);
         Task<(int statusCode, string result)> GetStationSearch(object search);
-        Task<(int statusCode, string result)> GetPNRStatus(object search);
     }
 }
