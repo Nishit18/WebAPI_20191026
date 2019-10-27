@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using WebAPI_20191026.Repository.Interfaces;
+using WebAPI_20191026.Repository.Repositories;
 
 namespace WebAPI_20191026.API
 {
@@ -25,6 +27,8 @@ namespace WebAPI_20191026.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            //New addition
+            services.AddSingleton<IRailway, Railway>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
