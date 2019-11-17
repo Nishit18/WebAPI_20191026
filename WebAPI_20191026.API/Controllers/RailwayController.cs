@@ -43,7 +43,7 @@ namespace WebAPI_20191026.API.Controllers
         //Search Indian Railway station by either code or it's name
         //Request JSON is below
         //{
-        //  "search":"delhi"
+        //  "search":"gujarat"
         //}
         [HttpPost("SearchStation")]
         public async Task<IActionResult> SearchStation(object search)
