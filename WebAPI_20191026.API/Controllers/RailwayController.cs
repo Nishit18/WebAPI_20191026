@@ -20,7 +20,7 @@ namespace WebAPI_20191026.API.Controllers
             railway = _railway;
         }
 
-        //Search Indian Railway trains by either train number or it's name train
+        //Search Indian Railway trains by either train number or it's name
         //Search train using train number or train keyword
         //Request JSON is below
         //{
